@@ -38,12 +38,15 @@ namespace ReqRes.Server
             }
 
             // Create Request Queue
+            //We receive messages sent by the sender with the ReplyToSessionId 
             await managementClient.CreateQueueAsync(AccountDetails.RequestQueueName);
 
             // Create Response With Sessions 
             QueueDescription responseQueueDescription =
                 new QueueDescription(AccountDetails.ResponseQueueName)
                 {
+                    //We create a session and set the session id received from the 
+                    // ReplyToSessionId 
                     RequiresSession = true
                 };
 
@@ -79,7 +82,8 @@ namespace ReqRes.Server
             // Set the session id
             responseMessage.SessionId = requestMessage.ReplyToSessionId;
 
-            // Send the response message.
+            // Send the response message. The Client is wating with a session open for this 
+            // session id
             await ResponseQueueClient.SendAsync(responseMessage);
             Console.WriteLine("Sent: " + echoText);
         }

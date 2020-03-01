@@ -20,24 +20,21 @@ namespace ReqRes.Client
         {
             Console.WriteLine("Client Console");
 
-
-
-
-
-
-
             while (true)
             {
                 Console.WriteLine("Enter text:");
                 string text = Console.ReadLine();
 
-                // Create a session identifyer for the response message
+                // Create a session identifier for the response message
+                
                 string responseSessionId = Guid.NewGuid().ToString();
 
                 // Create a message using text as the body.
                 var requestMessage = new Message(Encoding.UTF8.GetBytes(text));
 
                 // Set the appropriate message properties.
+                //Send the first message to the first queue with the 
+                // responseID set
                 requestMessage.ReplyToSessionId = responseSessionId;
 
                 var stopwatch = Stopwatch.StartNew();
@@ -46,6 +43,8 @@ namespace ReqRes.Client
                 await RequestQueueClient.SendAsync(requestMessage);
 
                 // Create a session client
+                // wait for the server to responsd with the same SessionId
+                // by creating a session client
                 var sessionClient =
                     new SessionClient("ConnectionString", "QueueName");
 
