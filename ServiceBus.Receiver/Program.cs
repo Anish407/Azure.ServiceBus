@@ -43,8 +43,12 @@ namespace ServiceBus.Receiver
             {
                 // Maximum number of Concurrent calls to the callback `ProcessMessagesAsync`, set to 1 for simplicity.
                 // Set it according to how many messages the application wants to process in parallel.
+                // Number of threads that will act on the queue, so 1 thread will 
+                // serve all the requests
+                //for more than 1 thread the order of the request will not be preserved. So if order is imp then use 1 thread
                 MaxConcurrentCalls = 1,
 
+                // we have to manually complete the messages that were processed successfully  
                 // Indicates whether MessagePump should automatically complete the messages after returning from User Callback.
                 // False below indicates the Complete will be handled by the User Callback as in `ProcessMessagesAsync` below.
                 AutoComplete = false
@@ -63,6 +67,7 @@ namespace ServiceBus.Receiver
 
             // Complete the message so that it is not received again.
             // This can be done only if the queueClient is created in ReceiveMode.PeekLock mode (which is default).
+            // SInce we have set AutoComplete = false, we need to manually complete the message
             await queueClient.CompleteAsync(message.SystemProperties.LockToken);
 
             // Note: Use the cancellationToken passed as necessary to determine if the queueClient has already been closed.
