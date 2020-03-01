@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBus.Receiver", "Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBus.Models", "ServiceBus.Models\ServiceBus.Models.csproj", "{3D7FF2CC-60DF-47C8-8FEB-A5F8D1FBED27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopicsAndSubscriptions", "D:\Pluralsight ZIP\azure-service-bus-in-depth\07\demos\TopicsAndSubscriptions\TopicsAndSubscriptions\TopicsAndSubscriptions.csproj", "{72C43147-8639-4856-8F25-8352CC07E55A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicsAndSubscriptions", "TopicsAndSubscriptions\TopicsAndSubscriptions.csproj", "{E9A20911-86F9-4632-88A6-791D5A374EE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{3D7FF2CC-60DF-47C8-8FEB-A5F8D1FBED27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D7FF2CC-60DF-47C8-8FEB-A5F8D1FBED27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D7FF2CC-60DF-47C8-8FEB-A5F8D1FBED27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72C43147-8639-4856-8F25-8352CC07E55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72C43147-8639-4856-8F25-8352CC07E55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72C43147-8639-4856-8F25-8352CC07E55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72C43147-8639-4856-8F25-8352CC07E55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A20911-86F9-4632-88A6-791D5A374EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A20911-86F9-4632-88A6-791D5A374EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A20911-86F9-4632-88A6-791D5A374EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A20911-86F9-4632-88A6-791D5A374EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
