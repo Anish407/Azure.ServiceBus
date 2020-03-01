@@ -1,11 +1,9 @@
 ﻿using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.Management;
 using Newtonsoft.Json;
-using RfidCheckout.Config;
-using RfidCheckout.Messages;
+using Session.COmmon;
 using System;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Session.Reader

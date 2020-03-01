@@ -1,7 +1,6 @@
 ﻿using Microsoft.Azure.ServiceBus;
 using Newtonsoft.Json;
-using RfidCheckout.Config;
-using RfidCheckout.Messages;
+using Session.COmmon;
 using System;
 using System.Text;
 using System.Threading;
