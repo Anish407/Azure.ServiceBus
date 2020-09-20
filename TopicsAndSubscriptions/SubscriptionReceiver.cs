@@ -54,7 +54,7 @@ namespace TopicsAndSubscriptions
             await m_SubscriptionClient.CloseAsync();
         }
     }
-    C#
+   
     public class MessageReceiver
     {
         private const string ServiceBusConnectionString = "Endpoint=sb://bialecki.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=[privateKey]";
